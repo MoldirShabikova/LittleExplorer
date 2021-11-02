@@ -59,13 +59,13 @@ Home screen
 
 | Day          | Deliverable                                        | Status     |
 | ------------ | -------------------------------------------------- | ---------- |
-| October 28-29 | Prompt / Wireframes / Priority Matrix / Timeframes | CIncomplete   |
+| October 28-29 | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete   |
 | November  1  | Project Approval                                   | Incomplete   |
 | Nobember 2    | Core Application Structure (HTML, CSS, etc.)       | Incomplete   |
 | Nobember 3  | Pseudocode / actual code                           | Incomplete   |
 | Nobember 4  | Initial Clickable Model                            | Incomplete   |
 | Nobember 5  | MVP                                                | Incomplete   |
-| Nobember 6  | Presentations                                      | Incomplete |
+| Nobember 8  | Presentations                                      | Incomplete |
 
 
 
