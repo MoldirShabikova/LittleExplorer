@@ -20,13 +20,6 @@ More than just event listings: For parents who love to seek out the coolest, off
 
 <br>
 
-### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
 
 <br>
 
@@ -39,7 +32,6 @@ More than just event listings: For parents who love to seek out the coolest, off
 - Ruby on Rails
 - Psq
 - Cors
-- Morgan
 - Bcrypt
 - JWT
 
@@ -53,59 +45,12 @@ More than just event listings: For parents who love to seek out the coolest, off
 
 <br>
 
-### Client (Front End)
 
-#### Table
+## [Wireframes](https://whimsical.com/littleexplorer-V29ErWZmjkLstxw1SAJR2u)
+- Home screen
+- ![Home](https://res.cloudinary.com/dumv00y9b/image/upload/v1635859548/Screen_Shot_2021-11-02_at_9.25.22_AM_zh2rhr.png)
 
 
-
-![https://res.cloudinary.com/dumv00y9b/image/upload/v1635770376/Screen_Shot_2021-11-01_at_8.33.14_AM_xkrt7g.png](https://res.cloudinary.com/dumv00y9b/image/upload/v1635770376/Screen_Shot_2021-11-01_at_8.33.14_AM_xkrt7g.png)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
-
-#### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
-
-#### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
-``` structure
-
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
-
-```
 
 ## Project Schedule
 
@@ -123,20 +68,23 @@ src
 
 <br>
 
-### Server (Back End)
 
-#### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+### Component Hierarchy 
+https://whimsical.com/componenth-ThVSzRa6opCYwReo5RiCti
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+### ERD Model
+
+
+https://res.cloudinary.com/dumv00y9b/image/upload/v1635770376/Screen_Shot_2021-11-01_at_8.33.14_AM_xkrt7g.png
+[ERD Sample](https://res.cloudinary.com/dumv00y9b/image/upload/v1635770376/Screen_Shot_2021-11-01_at_8.33.14_AM_xkrt7g.png)
 <br>
 
 ***
 
 ## Post-MVP
-
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- User can add comments
+- User can search 
 
 ***
 
