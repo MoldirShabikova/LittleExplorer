@@ -1,11 +1,14 @@
 # LittleExplorer
-## Overview
+## Date:
+November, 2021 - Present
 
 ## Brief short description
 More than just event listings: For parents who love to seek out the coolest, off-the-beaten-track things to do with kids,Little Explorer shares activities that aren't just pleasant time passers, but promise enriching experiences for your family. At large, it should grow as a communication medium and resource sharing channel for all people.
 
 <br>
 
+
+## Features
 ## MVP
 
 >A user can - read only
@@ -47,7 +50,7 @@ More than just event listings: For parents who love to seek out the coolest, off
 
 
 ## [Wireframes](https://whimsical.com/littleexplorer-V29ErWZmjkLstxw1SAJR2u)
-- Home screen
+Home screen
 - ![Home](https://res.cloudinary.com/dumv00y9b/image/upload/v1635859548/Screen_Shot_2021-11-02_at_9.25.22_AM_zh2rhr.png)
 
 
