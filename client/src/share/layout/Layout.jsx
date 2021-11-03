@@ -1,5 +1,5 @@
 import Nav from '../header/Header'
-import Foot from '../footer/Footer'
+// import Foot from '../footer/Footer'
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props
@@ -7,7 +7,7 @@ export default function Layout(props) {
     <div>
       <Nav currentUser={currentUser} handleLogout={handleLogout} />
       {props.children}
-      <Foot />
+      {/* <Foot /> */}
     </div>
   )
 }

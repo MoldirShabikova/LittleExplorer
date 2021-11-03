@@ -1,0 +1,78 @@
+.nav-container-upper {
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(52, 197, 185);
+  border-bottom: 1px solid black;
+  background-color: rgb(19, 17, 17);
+}
+
+.nav-container-upper h6 {
+  margin: 5px 25px 5px 0px;
+}
+
+.nav-container-upper-text {
+  color: rgb(216, 207, 195);
+  text-decoration: none;
+}
+
+.nav-container {
+  background-color: #31e6dc;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0px 0px 0px 0px;
+}
+
+.nav-container p {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+#none {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+  color: #606060;
+  margin-right: 600px;
+  margin-top: 70px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+  font-weight: 50;
+  text-decoration: solid rgb(96, 96, 96);
+}
+
+.create-post-button {
+  border: 0.5px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  background-color: #4edbbc;
+  color: black;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  padding: 5px 10px 5px 10px;
+}
+
+.create-post-button:hover {
+  background-color: #ffff;
+  color: #4e99db;
+}
+
+#logout {
+  cursor: pointer;
+}
+
+#hv:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-cell-container {
+  display: none;
+}
