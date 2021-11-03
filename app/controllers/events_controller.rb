@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :set_user_craft, only: [:update, :desrtoy]
 
   # GET /events
   def index
@@ -20,7 +21,7 @@ class EventsController < ApplicationController
     @event.user = @current_user
 
     if @event.save
-      render json: @event, status: :created, location: @event
+      render json: @event, status: :created
     else
       render json: @event.errors, status: :unprocessable_entity
     end
@@ -44,6 +45,9 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+    end
+    def set_user_event
+      @event = @current_user.events.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

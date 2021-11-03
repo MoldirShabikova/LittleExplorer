@@ -1,6 +1,7 @@
 class CraftsController < ApplicationController
   before_action :set_craft, only: [:show]
   before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :set_user_craft, only: [:update, :desrtoy]
 
   # GET /crafts
   def index
@@ -20,7 +21,7 @@ class CraftsController < ApplicationController
     @craft.user = @current_user
 
     if @craft.save
-      render json: @craft, status: :created, location: @craft
+      render json: @craft, status: :created
     else
       render json: @craft.errors, status: :unprocessable_entity
     end
@@ -44,6 +45,9 @@ class CraftsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_craft
       @craft = Craft.find(params[:id])
+    end
+    def set_user_craft
+      @craft = @current_user.crafts.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
