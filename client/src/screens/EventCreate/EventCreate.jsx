@@ -17,10 +17,12 @@ export default function EventCreate(props) {
   const { handleEventCreate } = props
 
   const handleChange = (e) => {
-    const { value } = e.target
-    setFormData({
-      name: value,
-    })
+    const { name, value } = e.target
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+
+      [name]: value,
+    }))
   }
 
   return (
@@ -54,7 +56,7 @@ export default function EventCreate(props) {
       <label>
         <p>Time*</p>
         <input
-          type='text'
+          type='time'
           name='time'
           value={time}
           required
@@ -112,9 +114,8 @@ export default function EventCreate(props) {
         />
       </div>
       <br />
-      <Link to='/events'>
-        <button>Submit</button>
-      </Link>
+
+      <button>Submit</button>
     </form>
   )
 }

@@ -15,11 +15,17 @@ import {
 // get the lists from API
 
 import { getAllCrafts } from './services/crafts'
-import { getAllEvents, postEvent } from './services/event'
+import {
+  getAllEvents,
+  postEvent,
+  putEvent,
+  deleteEvent,
+} from './services/event'
 
 import Crafts from './screens/Crafts/Crafts'
 import Events from './screens/Events/Events'
-import EventCreate from './screens/Events/EventCreate/EventCreate'
+import EventCreate from './screens/EventCreate/EventCreate'
+import EventEdit from './screens/EventEdit/EventEdit'
 // import CraftsDetails from './screens/CraftsDetails/CraftsDetails'
 import CraftCreate from './screens/CraftsDetails/CraftCreate/CraftCreate'
 import CreatePosts from './screens/CreatePosts/CreatePosts'
@@ -61,6 +67,16 @@ function App() {
   const handleEventCreate = async (formData) => {
     const newEvent = await postEvent(formData)
     setEvents((prevState) => [...prevState, newEvent])
+    history.push('/events')
+  }
+
+  const handleEventUpdate = async (id, formData) => {
+    const newEvent = await putEvent(id, formData)
+    setEvents((prevState) =>
+      prevState.map((event) => {
+        return event.id === Number(id) ? newEvent : event
+      })
+    )
     history.push('/events')
   }
 
@@ -112,6 +128,9 @@ function App() {
         </Route>
         <Route path='/crafts'>
           <Crafts crafts={crafts} />
+        </Route>
+        <Route path='/events/:id/edit'>
+          <EventEdit events={events} handleEventUpdate={handleEventUpdate} />
         </Route>
         <Route path='/events/new'>
           <EventCreate handleEventCreate={handleEventCreate} />

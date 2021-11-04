@@ -10,12 +10,12 @@ export const getOneEvent = async (id) => {
 }
 
 export const postEvent = async (eventData) => {
-  const resp = await api.post('/events', { craft: eventData })
+  const resp = await api.post('/events', { event: eventData })
   return resp.data
 }
 
 export const putEvent = async (id, eventData) => {
-  const resp = await api.put(`/events/${id}`, { food: eventData })
+  const resp = await api.put(`/events/${id}`, { event: eventData })
   return resp.data
 }
 
