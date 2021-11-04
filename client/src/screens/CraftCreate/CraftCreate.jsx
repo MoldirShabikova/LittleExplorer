@@ -13,10 +13,11 @@ export default function CraftCreate(props) {
   const { handleCraftCreate } = props
 
   const handleChange = (e) => {
-    const { value } = e.target
-    setFormData({
-      name: value,
-    })
+    const { name, value } = e.target
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }))
   }
 
   return (
@@ -61,7 +62,7 @@ export default function CraftCreate(props) {
         <label>
           <p>Image*</p>
           <input
-            type='image'
+            type='file'
             name='image'
             value={image}
             required

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 export default function EventCreate(props) {
   const [formData, setFormData] = useState({
@@ -96,7 +95,7 @@ export default function EventCreate(props) {
       <label>
         <p>Image*</p>
         <input
-          type='text'
+          type='file'
           name='image'
           value={image}
           required

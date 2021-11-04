@@ -1,22 +1,36 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import React from 'react'
-export default function Crafts(props) {
-  const { crafts } = props
 
+export default function Crafts(props) {
+  const { crafts, handleCraftDelete, currentUser } = props
   return (
     <div>
-      <h3>Crafts for Kids</h3>
+      <h3> Crafts for Kids</h3>
       {crafts.map((craft) => (
-        <div>
-          <Link to='/craftsDetails'>
-            {' '}
-            <p>{craft.title}</p>{' '}
+        <div key={craft.id}>
+          <Link to={`/crafts/${craft.id}`}>
+            <p>{craft.title}</p>
+            <p>{craft.name}</p>
+            <img src={craft.image} />
+            <p>{craft.description}</p>
+            <p>{craft.posted_date}</p>
+            <p>{craft.email}</p>
+            <p></p>
           </Link>
-          <p>by: {craft.name}</p>
-          <img src={craft.image} />
+          {currentUser?.id === craft.user_id && (
+            <div>
+              <Link to={`/crafts/${craft.id}/edit`}>
+                <button>edit</button>
+              </Link>
+              <button onClick={() => handleCraftDelete(craft.id)}>
+                delete
+              </button>
+            </div>
+          )}
         </div>
       ))}
+      <Link to='/crafts/new'>
+        <button>Create</button>
+      </Link>
     </div>
   )
 }

@@ -9,7 +9,13 @@ export default function Events(props) {
         <div key={event.id}>
           <Link to={`/events/${event.id}`}>
             <p>{event.title}</p>
-            <p>{event.name}</p>
+            <p>{event.date}</p>
+            <p>{event.time}</p>
+            <p>{event.age}</p>
+            <p>{event.price}</p>
+            <p>{event.location}</p>
+            <img src={event.image} />
+            <p>{event.description}</p>
           </Link>
           {currentUser?.id === event.user_id && (
             <div>

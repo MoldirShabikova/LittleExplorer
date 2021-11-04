@@ -27,7 +27,7 @@ import Events from './screens/Events/Events'
 import EventCreate from './screens/EventCreate/EventCreate'
 import EventEdit from './screens/EventEdit/EventEdit'
 // import CraftsDetails from './screens/CraftsDetails/CraftsDetails'
-import CraftCreate from './screens/CraftsDetails/CraftCreate/CraftCreate'
+import CraftCreate from './screens/CraftCreate/CraftCreate'
 import CreatePosts from './screens/CreatePosts/CreatePosts'
 
 function App() {
@@ -63,6 +63,11 @@ function App() {
     }
     handleVerify()
   }, [])
+  const handleCraftCreate = async (formData) => {
+    const newCraft = await postEvent(formData)
+    setCrafts((prevState) => [...prevState, newCraft])
+    history.push('/crafts')
+  }
 
   const handleEventCreate = async (formData) => {
     const newEvent = await postEvent(formData)
@@ -120,8 +125,8 @@ function App() {
         {/* <Route>
           <CraftsDetails />
         </Route> */}
-        <Route path='/craftCreate'>
-          <CraftCreate setCrafts />
+        <Route path='/crafts/new'>
+          <CraftCreate handleCraftCreate={handleCraftCreate} />
         </Route>
         <Route path='/create/posts'>
           <CreatePosts />
