@@ -8,7 +8,14 @@ export default function Crafts(props) {
     <div>
       <h3>Crafts for Kids</h3>
       {crafts.map((craft) => (
-        <p>{craft.title}</p>
+        <div>
+          <Link to='/craftsDetails'>
+            {' '}
+            <p>{craft.title}</p>{' '}
+          </Link>
+          <p>by: {craft.name}</p>
+          <img src={craft.image} />
+        </div>
       ))}
     </div>
   )

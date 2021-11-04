@@ -59,9 +59,12 @@ export default function Header(props) {
           </Link>
           <div>
             {currentUser ? (
-              <Link to='/create/posts' id='none'>
-                <p className='create-post-button'>Create a Post</p>
-              </Link>
+              <>
+                <p>Welcome, {currentUser.username}</p>
+                <Link to='/create/posts' id='none'>
+                  <p className='create-post-button'>Create a Post</p>
+                </Link>
+              </>
             ) : (
               <p
                 className='create-post-button'

@@ -29,6 +29,7 @@ puts "#{User.count} users created"
 Craft.create!(
   title: '100 Awesome Art Projects for Creative At-Home Fun',
   name: 'Ally Noel',
+  image: 'https://static.mommypoppins.com/styles/image960x650/s3/new_img_0808_1.jpg',
   description: "Did you know plastic milk jugs make awesome fairy houses, or sugar cubes are a fun substitute for Lego bricks? Sometimes we all need a little inspiration to get our creative juices flowing. And we're here to help, with a mega list of 100 arts and crafts projects you can do with your kids in the comfort of your own home.
     Our list of creative boredom busters, includes everything from paper crafts, like crafting a decorative paper mache bowl, to our best slime recipes, inventive STEM activities, and projects perfect for the artsy preschooler in your life.
     So, embrace your inner maker, and your newfound homebound existence, roll up your sleeves, and craft some memories and pretty cool finished projects in the process 
@@ -50,6 +51,7 @@ Craft.create!(
 Craft.create!(
   title: 'Preschool Thanksgiving Crafts ',
   name: 'Katie Mclaw',
+  image: 'https://static.mommypoppins.com/styles/image960x650/s3/watercoloring.jpg',
   description: "1. Spice Dough
   For many people, the scent of nutmeg, cloves, and cinnamon invoke the warm and cozy feeling of the holidays. This Spice Playdough not only smells like homemade pumpkin pie, but it will also keep little hands occupied during the Thanksgiving feast!  
   2. Fruit Turkeys
@@ -84,6 +86,7 @@ Craft.create!(
 Craft.create!(
 title: 'Easy Christmas Paper Craft',
 name: 'Sarah Smith',
+image: 'https://i2.wp.com/www.thebestideasforkids.com/wp-content/uploads/2017/11/Christmas-Tree-Crafts-for-Kids-Ideas.jpg',
 description: 'Christmas is right around the corner, and that means crafts galore! This Easy Christmas Paper Craft is a great way to bring in the holiday spirit.
 
 There are many layers to this activity that make it an ideal craft for kids. From the adorable Santa outfit to hanging it to dry on the line, you’ll love every second of this!',
@@ -98,6 +101,7 @@ puts "#{Craft.count} crafts created"
 
 Event.create!(
   title: 'Little Leapers at Sky Zone Clermont',
+  image: 'https://d3qlyn3oeazit.cloudfront.net/production/BlogPostSection/223/image_1/gallery_image_1618350991-ActivePlay.png',
   date: 'Aug 12',
   time: '9:00 a.m',
   age: '5 and under', 
@@ -109,6 +113,7 @@ Event.create!(
 
 Event.create!(
   title: 'Pumpkin Ponderosa at Showcase of Citrus',
+  image:'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-106519389-1595002835.png',
   date: 'Sep 18',
   time: '9:00 am - 7:00pm',
   age: 'All ages',
@@ -119,6 +124,7 @@ Event.create!(
 )
 Event.create!(
   title: "Books n' Cookies at Princesses and Princes",
+  image: 'https://images.squarespace-cdn.com/content/v1/5839e25eb8a79b774fad8b39/1629396784394-B5VTIRU6UXWJOYSBQXLQ/DisPrincess2.jpg?format=1000w',
   date: 'May 18',
   time: '10:30am',
   age: '0 - 6',
@@ -129,18 +135,20 @@ Event.create!(
   user: @moldir
 )
 Event.create!(
-  title: "Books n' Cookies at Princesses and Princes",
-  date: 'May 18',
-  time: '10:30am',
+  title: "Pirate's ship party",
+  image: 'https://cdn.greenvelope.com/blog/wp-content/uploads/image6-2.jpg',
+  date: 'April 18',
+  time: '11:30am',
   age: '0 - 6',
   price: 'Included with admission of $13.99 per child (1 adult included); $9.99 for siblings',
-  location:'Princesses and Princes Indoor Playground',
+  location:'Pirate In Ship',
   description: 'This sweet weekly event includes storytime and a treat.
   Advanced admission is required and can be purchased on the Princesses and Princes website.',
   user: @bob
 )
 Event.create!(
   title: "BOGO Wednesdays at Monkey Joe's, Winter Park",
+  image: 'https://d2fxn1d7fsdeeo.cloudfront.net/kentuckyliving.com/wp-content/uploads/2020/11/13135841/MJ-head-and-logo.jpg',
   date: 'Mar 3',
   time: '10:30 - 3:00pm',
   age: 'All ages',
