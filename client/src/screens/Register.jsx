@@ -30,7 +30,7 @@ export default function Register(props) {
         >
           <h1 id='welcome-text'>Welcome</h1>
           <h2>Create account</h2>
-          <h5>Be creative and join today. Get million ideas</h5>
+          <h5>Be creative and join today.</h5>
           <input
             className='input-register-username'
             type='text'
@@ -40,6 +40,7 @@ export default function Register(props) {
             value={username}
             onChange={handleChange}
           />
+
           <input
             className='input-register-email'
             type='text'
@@ -49,7 +50,6 @@ export default function Register(props) {
             value={email}
             onChange={handleChange}
           />
-
           <input
             className='input-register-password'
             type='text'
