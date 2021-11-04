@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function EventCreate(props) {
   const [formData, setFormData] = useState({
@@ -11,7 +12,8 @@ export default function EventCreate(props) {
     image: '',
     description: '',
   })
-  const { title } = formData
+  const { title, date, time, age, price, location, image, description } =
+    formData
   const { handleEventCreate } = props
 
   const handleChange = (e) => {
@@ -44,7 +46,17 @@ export default function EventCreate(props) {
         <input
           type='date'
           name='date'
-          value={posted_date}
+          value={date}
+          required
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        <p>Time*</p>
+        <input
+          type='text'
+          name='time'
+          value={time}
           required
           onChange={handleChange}
         />
@@ -70,23 +82,22 @@ export default function EventCreate(props) {
         />
       </label>
       <label>
-        <p>Image*</p>
+        <p>Location*</p>
         <input
-          type='image'
-          name='image'
-          value={image}
+          type='text'
+          name='location'
+          value={location}
           required
           onChange={handleChange}
         />
       </label>
       <label>
-        <p>Email*</p>
+        <p>Image*</p>
         <input
-          type='email'
-          name='email'
-          value={email}
+          type='text'
+          name='image'
+          value={image}
           required
-          maxLength='30'
           onChange={handleChange}
         />
       </label>
@@ -101,7 +112,9 @@ export default function EventCreate(props) {
         />
       </div>
       <br />
-      <button>Submit</button>
+      <Link to='/events'>
+        <button>Submit</button>
+      </Link>
     </form>
   )
 }
