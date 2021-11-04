@@ -17,6 +17,8 @@ import {
 import { getAllCrafts } from './services/crafts'
 import { getAllEvents } from './services/event'
 
+import Crafts from './screens/Crafts/Crafts'
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [error, setError] = useState(null)
@@ -87,6 +89,9 @@ function App() {
         </Route>
         <Route path='/register'>
           <Register handleRegister={handleRegister} />
+        </Route>
+        <Route path='/crafts'>
+          <Crafts crafts={crafts} />
         </Route>
       </Switch>
     </Layout>
