@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { deleteEvent, getOneEvent } from '../../services/event'
 import { FaEdit, FaTrash } from 'react-icons/fa'
@@ -8,7 +8,7 @@ export default function EventDetails(props) {
   const [postEvent, setPostEvent] = useState(null)
   const { currentUser } = props
   const { id } = useParams()
-
+  const history = useHistory()
   useEffect(() => {
     const fecthPostEvent = async () => {
       const postData = await getOneEvent(id)
@@ -19,7 +19,8 @@ export default function EventDetails(props) {
 
   const handleEventDelete = async (id) => {
     await deleteEvent(id)
-    setPostEvent((prevState) => prevState.filter((event) => event.id !== id))
+    history.push('/events')
+    // setPostEvent((prevState) => prevState.filter((event) => event.id !== id))
   }
 
   return (
@@ -41,11 +42,9 @@ export default function EventDetails(props) {
         <FaTrash onClick={() => handleEventDelete(postEvent.id)} />
       </div>
 
-      <p className='event-go-back'>
-        <Link to='/events' id='none'>
-          Go Back
-        </Link>
-      </p>
+      <Link to='/events' id='none'>
+        <p className='event-go-back'>Go Back</p>
+      </Link>
     </div>
   )
 }

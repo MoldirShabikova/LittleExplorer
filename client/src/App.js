@@ -141,11 +141,11 @@ function App() {
         <Route path='/events/:id/edit'>
           <EventEdit events={events} handleEventUpdate={handleEventUpdate} />
         </Route>
-        <Route path='/events/:id'>
-          <EventDetails events={events} />
-        </Route>
         <Route path='/events/new'>
           <EventCreate handleEventCreate={handleEventCreate} />
+        </Route>
+        <Route path='/events/:id'>
+          <EventDetails events={events} />
         </Route>
         <Route path='/events'>
           <Events events={events} />

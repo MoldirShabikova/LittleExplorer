@@ -23,15 +23,15 @@ export default function EventEdit() {
     }
     fetchEvent()
   }, [id])
-  const handleChange = (event) => {
-    const { name, value } = event.target
+  const handleChange = (e) => {
+    const { name, value } = e.target
     setEvent({
       ...event,
       [name]: value,
     })
   }
-  const handleSubmit = async (event) => {
-    event.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     const updated = await putEvent(id, event)
     setUpdated(updated)
   }
