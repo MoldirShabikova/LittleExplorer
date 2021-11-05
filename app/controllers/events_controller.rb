@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   before_action :authorize_request, only: [:create, :update, :destroy]
-  before_action :set_user_craft, only: [:update, :desrtoy]
+  before_action :set_user_event, only: [:update, :destroy]
 
   # GET /events
   def index

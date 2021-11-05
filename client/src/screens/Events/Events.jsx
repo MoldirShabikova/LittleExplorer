@@ -10,22 +10,19 @@ export default function Events(props) {
           <Link to={`/events/${event.id}`}>
             <p>{event.title}</p>
             <p>{event.date}</p>
-            <p>{event.time}</p>
-            <p>{event.age}</p>
-            <p>{event.price}</p>
-            <p>{event.location}</p>
             <img src={event.image} />
-            <p>{event.description}</p>
           </Link>
-          {currentUser?.id === event.user_id && (
-            <div>
-              <Link to={`/events/${event.id}/edit`}>
-                <button>edit</button>
-              </Link>
+          {currentUser?.id === event?.user_id ? (
+            <>
+              {/* <Link to={`/events/${event.id}/edit`}> */}
+              <button>edit</button>
+              {/* </Link> */}
               <button onClick={() => handleEventDelete(event.id)}>
                 delete
               </button>
-            </div>
+            </>
+          ) : (
+            ''
           )}
         </div>
       ))}

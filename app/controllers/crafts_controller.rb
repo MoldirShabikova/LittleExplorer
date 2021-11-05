@@ -1,7 +1,7 @@
 class CraftsController < ApplicationController
   before_action :set_craft, only: [:show]
   before_action :authorize_request, only: [:create, :update, :destroy]
-  before_action :set_user_craft, only: [:update, :desrtoy]
+  before_action :set_user_craft, only: [:update, :destroy]
 
   # GET /crafts
   def index

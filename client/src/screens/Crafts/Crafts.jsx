@@ -9,11 +9,7 @@ export default function Crafts(props) {
         <div key={craft.id}>
           <Link to={`/crafts/${craft.id}`}>
             <p>{craft.title}</p>
-            <p>{craft.name}</p>
             <img src={craft.image} />
-            <p>{craft.description}</p>
-            <p>{craft.posted_date}</p>
-            <p>{craft.email}</p>
             <p></p>
           </Link>
           {currentUser?.id === craft.user_id && (

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import { useParams, Redirect } from 'react-router-dom'
+import { getOneEvent, putEvent } from '../../services/event'
 
-export default function EventEdit(props) {
-  const [formData, setFormData] = useState({
+export default function EventEdit() {
+  const [event, setEvent] = useState({
     title: '',
     date: '',
     time: '',
@@ -13,44 +13,41 @@ export default function EventEdit(props) {
     image: '',
     description: '',
   })
-  const { title, date, time, age, price, location, image, description } =
-    formData
-  const { id } = useParams
-  const { events, handleEventUpdate } = props
+  const [isUpdated, setUpdated] = useState(false)
 
+  let { id } = useParams()
   useEffect(() => {
-    const prefillFormData = () => {
-      const eventItem = events.find((event) => event.id === Number(id))
-      setFormData({
-        name: eventItem.name,
-      })
+    const fetchEvent = async () => {
+      const event = await getOneEvent(id)
+      setEvent(event)
     }
-    if (events.length) {
-      prefillFormData()
-    }
-  }, [events, id])
-
-  const handleChange = (e) => {
-    const { value } = e.target
-    setFormData({
-      name: value,
+    fetchEvent()
+  }, [id])
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setEvent({
+      ...event,
+      [name]: value,
     })
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const updated = await putEvent(id, event)
+    setUpdated(updated)
+  }
+  if (isUpdated) {
+    return <Redirect to={`/events/${id}`} />
   }
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault()
-        handleEventUpdate(id, formData)
-      }}
-    >
+    <form onSubmit={handleSubmit}>
       <h1>Edit Event</h1>
       <label>
         <p>Title*</p>
         <input
           type='text'
           name='title'
-          value={title}
+          value={event.title}
           required
           onChange={handleChange}
         />
@@ -58,9 +55,9 @@ export default function EventEdit(props) {
       <label>
         <p>Date*</p>
         <input
-          type='date'
+          type='text'
           name='date'
-          value={date}
+          value={event.date}
           required
           onChange={handleChange}
         />
@@ -68,9 +65,9 @@ export default function EventEdit(props) {
       <label>
         <p>Time*</p>
         <input
-          type='time'
+          type='text'
           name='time'
-          value={time}
+          value={event.time}
           required
           onChange={handleChange}
         />
@@ -80,7 +77,7 @@ export default function EventEdit(props) {
         <input
           type='text'
           name='age'
-          value={age}
+          value={event.age}
           required
           onChange={handleChange}
         />
@@ -90,7 +87,7 @@ export default function EventEdit(props) {
         <input
           type='text'
           name='price'
-          value={price}
+          value={event.price}
           required
           onChange={handleChange}
         />
@@ -100,7 +97,7 @@ export default function EventEdit(props) {
         <input
           type='text'
           name='location'
-          value={location}
+          value={event.location}
           required
           onChange={handleChange}
         />
@@ -110,7 +107,7 @@ export default function EventEdit(props) {
         <input
           type='text'
           name='image'
-          value={image}
+          value={event.image}
           required
           onChange={handleChange}
         />
@@ -120,15 +117,13 @@ export default function EventEdit(props) {
           type='text'
           placeholder='Description'
           name='description'
-          value={description}
+          value={event.description}
           required
           onChange={handleChange}
         />
       </div>
       <br />
-      <Link to='/events'>
-        <button>Save</button>
-      </Link>
+      <button>Save</button>
     </form>
   )
 }

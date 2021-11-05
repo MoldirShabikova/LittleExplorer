@@ -26,7 +26,8 @@ import Crafts from './screens/Crafts/Crafts'
 import Events from './screens/Events/Events'
 import EventCreate from './screens/EventCreate/EventCreate'
 import EventEdit from './screens/EventEdit/EventEdit'
-// import CraftsDetails from './screens/CraftsDetails/CraftsDetails'
+import EventDetails from './screens/EventDetails/EventDetails'
+import CraftsDetails from './screens/CraftsDetails/CraftsDetails'
 import CraftCreate from './screens/CraftCreate/CraftCreate'
 import CreatePosts from './screens/CreatePosts/CreatePosts'
 
@@ -122,9 +123,12 @@ function App() {
         <Route path='/register'>
           <Register handleRegister={handleRegister} />
         </Route>
-        {/* <Route>
-          <CraftsDetails />
+        {/* <Route path='/crafts/:id/edit'>
+          <CraftEdit crafts={crafts} handleCraftUpdate={handleCraftUpdate} />
         </Route> */}
+        <Route path='/crafts/:id'>
+          <CraftsDetails crafts={crafts} />
+        </Route>
         <Route path='/crafts/new'>
           <CraftCreate handleCraftCreate={handleCraftCreate} />
         </Route>
@@ -136,6 +140,9 @@ function App() {
         </Route>
         <Route path='/events/:id/edit'>
           <EventEdit events={events} handleEventUpdate={handleEventUpdate} />
+        </Route>
+        <Route path='/events/:id'>
+          <EventDetails events={events} />
         </Route>
         <Route path='/events/new'>
           <EventCreate handleEventCreate={handleEventCreate} />
