@@ -14,7 +14,12 @@ import {
 
 // get the lists from API
 
-import { getAllCrafts } from './services/crafts'
+import {
+  getAllCrafts,
+  postCraft,
+  putCraft,
+  deleteCraft,
+} from './services/crafts'
 import {
   getAllEvents,
   postEvent,
@@ -22,13 +27,16 @@ import {
   deleteEvent,
 } from './services/event'
 
-import Crafts from './screens/Crafts/Crafts'
 import Events from './screens/Events/Events'
 import EventCreate from './screens/EventCreate/EventCreate'
 import EventEdit from './screens/EventEdit/EventEdit'
 import EventDetails from './screens/EventDetails/EventDetails'
-import CraftsDetails from './screens/CraftsDetails/CraftsDetails'
+
+import Crafts from './screens/Crafts/Crafts'
 import CraftCreate from './screens/CraftCreate/CraftCreate'
+import CraftsDetails from './screens/CraftsDetails/CraftsDetails'
+import CraftEdit from './screens/CraftEdit/CraftEdit'
+
 import CreatePosts from './screens/CreatePosts/CreatePosts'
 
 function App() {
@@ -64,9 +72,20 @@ function App() {
     }
     handleVerify()
   }, [])
+
   const handleCraftCreate = async (formData) => {
-    const newCraft = await postEvent(formData)
+    const newCraft = await postCraft(formData)
     setCrafts((prevState) => [...prevState, newCraft])
+    history.push('/crafts')
+  }
+
+  const handleCraftUpdate = async (id, formData) => {
+    const newCraft = await putCraft(id, formData)
+    setCrafts((prevState) =>
+      prevState.map((craft) => {
+        return craft.id === Number(id) ? newCraft : craft
+      })
+    )
     history.push('/crafts')
   }
 
@@ -120,33 +139,43 @@ function App() {
         <Route path='/login'>
           <Login handleLogin={handleLogin} />
         </Route>
+
         <Route path='/register'>
           <Register handleRegister={handleRegister} />
         </Route>
-        {/* <Route path='/crafts/:id/edit'>
+
+        <Route path='/crafts/:id/edit'>
           <CraftEdit crafts={crafts} handleCraftUpdate={handleCraftUpdate} />
-        </Route> */}
-        <Route path='/crafts/:id'>
-          <CraftsDetails crafts={crafts} />
         </Route>
+
         <Route path='/crafts/new'>
           <CraftCreate handleCraftCreate={handleCraftCreate} />
         </Route>
-        <Route path='/create/posts'>
-          <CreatePosts />
+
+        <Route path='/crafts/:id'>
+          <CraftsDetails crafts={crafts} />
         </Route>
+
         <Route path='/crafts'>
           <Crafts crafts={crafts} />
         </Route>
+
+        <Route path='/create/posts'>
+          <CreatePosts />
+        </Route>
+
         <Route path='/events/:id/edit'>
           <EventEdit events={events} handleEventUpdate={handleEventUpdate} />
         </Route>
+
         <Route path='/events/new'>
           <EventCreate handleEventCreate={handleEventCreate} />
         </Route>
+
         <Route path='/events/:id'>
           <EventDetails events={events} />
         </Route>
+
         <Route path='/events'>
           <Events events={events} />
         </Route>

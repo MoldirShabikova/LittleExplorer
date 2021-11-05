@@ -9,6 +9,7 @@ export default function EventDetails(props) {
   const { currentUser } = props
   const { id } = useParams()
   const history = useHistory()
+
   useEffect(() => {
     const fecthPostEvent = async () => {
       const postData = await getOneEvent(id)
@@ -20,7 +21,6 @@ export default function EventDetails(props) {
   const handleEventDelete = async (id) => {
     await deleteEvent(id)
     history.push('/events')
-    // setPostEvent((prevState) => prevState.filter((event) => event.id !== id))
   }
 
   return (

@@ -12,15 +12,17 @@ export default function Crafts(props) {
             <img src={craft.image} />
             <p></p>
           </Link>
-          {currentUser?.id === craft.user_id && (
-            <div>
-              <Link to={`/crafts/${craft.id}/edit`}>
-                <button>edit</button>
-              </Link>
+          {currentUser?.id === craft?.user_id ? (
+            <>
+              {/* <Link to={`/crafts/${craft.id}/edit`}> */}
+              <button>edit</button>
+              {/* </Link> */}
               <button onClick={() => handleCraftDelete(craft.id)}>
                 delete
               </button>
-            </div>
+            </>
+          ) : (
+            ''
           )}
         </div>
       ))}

@@ -15,7 +15,7 @@ export const postCraft = async (craftData) => {
 }
 
 export const putCraft = async (id, craftData) => {
-  const resp = await api.put(`/crafts/${id}`, { food: craftData })
+  const resp = await api.put(`/crafts/${id}`, { craft: craftData })
   return resp.data
 }
 

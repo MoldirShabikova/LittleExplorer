@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { getOneCraft } from '../../services/crafts'
+import { deleteCraft, getOneCraft } from '../../services/crafts'
 import { FaEdit, FaTrash } from 'react-icons/fa'
 
 export default function CraftDetails(props) {
   const [postCraft, setPostCraft] = useState(null)
   const { currentUser } = props
   const { id } = useParams()
+  const history = useHistory()
 
   useEffect(() => {
     const fecthPostCraft = async () => {
@@ -17,6 +18,10 @@ export default function CraftDetails(props) {
     fecthPostCraft()
   }, [id])
 
+  const handleCraftDelete = async (id) => {
+    await deleteCraft(id)
+    history.push('/crafts')
+  }
   return (
     <div>
       <div>
@@ -31,13 +36,11 @@ export default function CraftDetails(props) {
         <Link to={`/crafts/${id}/edit`}>
           <FaEdit />
         </Link>
-        <FaTrash className='delete-button' />
+        <FaTrash onClick={() => handleCraftDelete(postCraft.id)} />
       </div>
-      <p className='craft-go-back'>
-        <Link to='/crafts' id='none'>
-          Go Back
-        </Link>
-      </p>
+      <Link to='/crafts' id='none'>
+        <p className='craft-go-back'>Go Back</p>
+      </Link>
     </div>
   )
 }
