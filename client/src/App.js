@@ -4,6 +4,8 @@ import './App.css'
 import Login from './screens/Login'
 import Layout from './share/layout/Layout'
 import Register from './screens/Register'
+import Contact from './screens/Contact/Contact'
+import AboutUs from './screens/AboutUs/AboutUs'
 
 import {
   loginUser,
@@ -178,6 +180,14 @@ function App() {
 
         <Route path='/events'>
           <Events events={events} />
+        </Route>
+
+        <Route path='/about'>
+          <AboutUs />
+        </Route>
+
+        <Route path='/contact'>
+          <Contact />
         </Route>
       </Switch>
     </Layout>
