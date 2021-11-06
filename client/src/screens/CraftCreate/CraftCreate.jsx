@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import './CraftCreate.css'
 export default function CraftCreate(props) {
   const [formData, setFormData] = useState({
     title: '',
@@ -21,8 +21,9 @@ export default function CraftCreate(props) {
   }
 
   return (
-    <div>
+    <div className='craft-create'>
       <form
+        className='craft-create-form'
         onSubmit={(e) => {
           e.preventDefault()
           handleCraftCreate(formData)
@@ -61,7 +62,7 @@ export default function CraftCreate(props) {
         <label>
           <p>Image*</p>
           <input
-            type='file'
+            type='text'
             name='image'
             value={image}
             required
@@ -91,7 +92,7 @@ export default function CraftCreate(props) {
         </div>
 
         <br />
-        <button>Submit</button>
+        <button className='craft-create-btn'>Submit</button>
       </form>
     </div>
   )

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import { getOneCraft, putCraft } from '../../services/crafts'
-
+import './CraftEdit.css'
 export default function CraftCreate() {
   const [craft, setCraft] = useState({
     title: '',
@@ -38,8 +38,8 @@ export default function CraftCreate() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='craft-edit'>
+      <form className='craft-edit-form' onSubmit={handleSubmit}>
         <h1>Edit Craft</h1>
         <label>
           <p>Title*</p>
@@ -75,7 +75,7 @@ export default function CraftCreate() {
           <p>Image*</p>
           <input
             type='text'
-            name='image'
+            name='text'
             value={craft.image}
             required
             onChange={handleChange}
@@ -104,7 +104,7 @@ export default function CraftCreate() {
         </div>
 
         <br />
-        <button>Save</button>
+        <button className='craft-btn'>Save</button>
       </form>
     </div>
   )

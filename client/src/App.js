@@ -191,12 +191,12 @@ function App() {
           <Activities />
         </Route>
 
-        <Route path='/'>
-          <MainPage />
-        </Route>
-
         <Route path='/contact'>
           <Contact />
+        </Route>
+
+        <Route path='/'>
+          <MainPage />
         </Route>
       </Switch>
     </Layout>

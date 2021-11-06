@@ -1,10 +1,10 @@
 .footer-container {
   display: flex;
   justify-content: space-around;
-  border-top: 1px solid rgb(50, 219, 219);
+  border-top: 1px solid rgb(20, 119, 119);
   background-color: #31e6dc;
   color: black;
-  padding: 5%;
+  padding: 1%;
 }
 
 .footer-box h4 {
