@@ -6,7 +6,8 @@ import Layout from './share/layout/Layout'
 import Register from './screens/Register'
 import Contact from './screens/Contact/Contact'
 import AboutUs from './screens/AboutUs/AboutUs'
-
+import Activities from './screens/Activities/Activities'
+import MainPage from './screens/MainPage/MainPage'
 import {
   loginUser,
   registerUser,
@@ -184,6 +185,14 @@ function App() {
 
         <Route path='/about'>
           <AboutUs />
+        </Route>
+
+        <Route path='/activities'>
+          <Activities />
+        </Route>
+
+        <Route path='/'>
+          <MainPage />
         </Route>
 
         <Route path='/contact'>

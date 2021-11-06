@@ -47,8 +47,8 @@ export default function Header(props) {
           <Link to='/events' id='none'>
             <p id='hv'>Events</p>
           </Link>
-          <Link to='/blogs' id='none'>
-            <p id='hv'>Blog</p>
+          <Link to='/activities' id='none'>
+            <p id='hv'>Printables</p>
           </Link>
 
           <Link to='/about' id='none'>

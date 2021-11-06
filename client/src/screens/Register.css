@@ -1,0 +1,121 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.register-box {
+  padding: 10px;
+  width: 500px;
+  height: 500px;
+  border-radius: 5em 5em 5em 5em;
+  text-align: center;
+}
+
+#welcome-text {
+  color: #1b98e0;
+}
+
+.input-register-username {
+  margin: 10px;
+  background: url('https://img.icons8.com/fluent/48/000000/username.png')
+    no-repeat scroll 5px;
+  text-align: center;
+  background-size: 25px;
+  height: 35px;
+  border-radius: 5em 5em 5em 5em;
+  outline: none;
+  width: 420px;
+  height: 30px;
+  font-weight: 800;
+}
+
+.input-register-firstName {
+  margin: 10px;
+  background: url('https://img.icons8.com/dotty/80/000000/name.png') no-repeat
+    scroll 5px;
+  text-align: center;
+  background-size: 20px;
+  height: 35px;
+  border-radius: 5em 5em 5em 5em;
+  outline: none;
+  width: 190px;
+  height: 30px;
+  font-weight: 800;
+}
+
+.input-register-LastName {
+  margin: 10px;
+  background: url('https://img.icons8.com/dotty/80/000000/name.png') no-repeat
+    scroll 5px;
+  text-align: center;
+  background-size: 20px;
+  height: 35px;
+  border-radius: 5em 5em 5em 5em;
+  outline: none;
+  width: 190px;
+  height: 30px;
+  font-weight: 800;
+}
+
+.input-register-email {
+  margin: 10px;
+  background: url('https://img.icons8.com/ultraviolet/40/000000/email.png')
+    no-repeat scroll 5px;
+  text-align: center;
+  background-size: 17px;
+  height: 35px;
+  border-radius: 5em 5em 5em 5em;
+  outline: none;
+  width: 420px;
+  height: 30px;
+  font-weight: 800;
+}
+
+.input-register-cellPhone {
+  margin: 10px;
+  background: url('https://img.icons8.com/dusk/64/000000/nokia-3310.png')
+    no-repeat scroll 5px;
+  text-align: center;
+  background-size: 17px;
+  height: 35px;
+  border-radius: 5em 5em 5em 5em;
+  outline: none;
+  width: 190px;
+  height: 30px;
+  font-weight: 800;
+}
+
+.input-register-password {
+  margin: 10px;
+  background: url('https://img.icons8.com/ultraviolet/40/000000/heart-key.png')
+    no-repeat scroll 5px;
+  text-align: center;
+  background-size: 17px;
+  height: 35px;
+  border-radius: 5em 5em 5em 5em;
+  outline: none;
+  width: 190px;
+  height: 30px;
+  font-weight: 800;
+}
+
+#register-form-button {
+  background-color: #1b98e0;
+  border-radius: 5em 5em 5em 5em;
+  line-height: 2em;
+  outline: none;
+  width: 290px;
+  margin-top: 35px;
+  height: 40px;
+  color: white;
+  font-size: large;
+}
+
+@media only screen and (max-width: 377px) {
+  .register-main-container form {
+    padding: 20px;
+  }
+}
