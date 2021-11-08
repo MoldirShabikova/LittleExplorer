@@ -28,9 +28,6 @@ export default function Events(props) {
             </div>
           </div>
         ))}
-        <Link to='/events/new'>
-          <button>Create</button>
-        </Link>
       </div>
     </div>
   )

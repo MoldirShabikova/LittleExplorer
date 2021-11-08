@@ -1,0 +1,66 @@
+.event-detail {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px 70px 100px;
+  margin-top: 70px;
+}
+.event-img-center {
+  margin-left: 20%;
+}
+
+.event-detail h2 {
+  font-family: 'Irish Grover', cursive;
+  letter-spacing: 0.01em;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+}
+
+.description-craft {
+  font-size: 20px;
+  letter-spacing: 1;
+}
+.email-craft {
+  font-family: cursive;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-button {
+  text-decoration: none;
+  color: rgb(153, 230, 255);
+  margin: 12px;
+  margin-top: 20px;
+  font-size: 33px;
+}
+
+.edit-button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.delete-button {
+  color: rgb(153, 230, 255);
+  margin: 10px;
+  font-size: 30px;
+}
+
+.delete-button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.craft-go-back {
+  margin-left: 47.5%;
+  margin-top: 20px;
+  width: 90px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: rgb(56, 194, 236);
+  border-radius: 10px;
+  outline-color: lightseagreen;
+}
