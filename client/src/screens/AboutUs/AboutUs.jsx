@@ -1,7 +1,5 @@
 import './AboutUs.css'
 import About from '../../assets/about.png'
-// import Community from '../../assets/about-community5.png'
-import Moldir from '../../assets/Moldir.png'
 import Mission from '../../assets/Mission.png'
 
 export default function AboutUs(props) {
@@ -74,19 +72,6 @@ export default function AboutUs(props) {
             </a>
           </div>
         </p>
-        <img className='about-me-image' src={Moldir} />
-      </div>
-
-      <div className='about-idea'>
-        <h2 className='about-header-text'>THE ORIGINS OF THE IDEA</h2>
-        <br />
-        <p className='about-paragraph-idea'>
-          <br />
-          <br />
-          While I was helping him, I developed the idea of the platform, which
-          should digital guide to people to pursue their needss.
-        </p>
-        <img src='https://www.pngarea.com/pngm/19/5435319_software-development-png-transparent-web-development-png-hd.png' />
       </div>
     </div>
   )
