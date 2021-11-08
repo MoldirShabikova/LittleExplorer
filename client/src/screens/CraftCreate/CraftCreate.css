@@ -16,13 +16,14 @@
 }
 .craft-create-form h1 {
   font-family: 'Irish Grover', cursive;
-  padding-bottom: 20px;
+  margin-top: -20px;
+  height: 120px;
 }
 .craft-create-form input {
   width: 400px;
   padding: 15px;
   border-radius: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   float: right;
   font-size: medium;
   background-color: rgb(153, 230, 255);
@@ -35,12 +36,14 @@ textarea:focus {
 }
 .craft-create-form label {
   font-size: small;
+  margin-bottom: -5px;
 }
 .craft-create-form textarea {
   height: 150px;
-  width: 425px;
+  width: 410px;
   border-radius: 20px;
   margin-top: 10px;
+  padding: 10px 10px 15px 15px;
 }
 .craft-create-btn {
   width: 90px;

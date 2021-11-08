@@ -16,13 +16,14 @@
 }
 .craft-edit-form h1 {
   font-family: 'Irish Grover', cursive;
-  padding-bottom: 20px;
+  margin-top: -20px;
+  height: 120px;
 }
 .craft-edit-form input {
   width: 400px;
   padding: 15px;
   border-radius: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   float: right;
   font-size: medium;
   background-color: rgb(153, 230, 255);

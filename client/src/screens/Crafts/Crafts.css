@@ -1,0 +1,34 @@
+.craft-title {
+  margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.main-box {
+  display: flex;
+  flex-direction: column;
+}
+.craft-lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.all-list {
+  display: flex;
+  justify-content: center;
+}
+
+.all-list img {
+  width: 380px;
+  border-radius: 5px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.all-list img:hover {
+  transform: scale(1.03);
+  transition-duration: 0.55s;
+  cursor: pointer;
+  position: relative;
+}

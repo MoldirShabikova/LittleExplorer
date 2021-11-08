@@ -24,39 +24,11 @@
     no-repeat scroll 5px;
   text-align: center;
   background-size: 25px;
-  height: 35px;
+  height: 40px;
   border-radius: 5em 5em 5em 5em;
   outline: none;
   width: 420px;
-  height: 30px;
-  font-weight: 800;
-}
 
-.input-register-firstName {
-  margin: 10px;
-  background: url('https://img.icons8.com/dotty/80/000000/name.png') no-repeat
-    scroll 5px;
-  text-align: center;
-  background-size: 20px;
-  height: 35px;
-  border-radius: 5em 5em 5em 5em;
-  outline: none;
-  width: 190px;
-  height: 30px;
-  font-weight: 800;
-}
-
-.input-register-LastName {
-  margin: 10px;
-  background: url('https://img.icons8.com/dotty/80/000000/name.png') no-repeat
-    scroll 5px;
-  text-align: center;
-  background-size: 20px;
-  height: 35px;
-  border-radius: 5em 5em 5em 5em;
-  outline: none;
-  width: 190px;
-  height: 30px;
   font-weight: 800;
 }
 
@@ -66,25 +38,11 @@
     no-repeat scroll 5px;
   text-align: center;
   background-size: 17px;
-  height: 35px;
+  height: 40px;
   border-radius: 5em 5em 5em 5em;
   outline: none;
   width: 420px;
-  height: 30px;
-  font-weight: 800;
-}
 
-.input-register-cellPhone {
-  margin: 10px;
-  background: url('https://img.icons8.com/dusk/64/000000/nokia-3310.png')
-    no-repeat scroll 5px;
-  text-align: center;
-  background-size: 17px;
-  height: 35px;
-  border-radius: 5em 5em 5em 5em;
-  outline: none;
-  width: 190px;
-  height: 30px;
   font-weight: 800;
 }
 
@@ -97,8 +55,8 @@
   height: 35px;
   border-radius: 5em 5em 5em 5em;
   outline: none;
-  width: 190px;
-  height: 30px;
+  width: 420px;
+
   font-weight: 800;
 }
 

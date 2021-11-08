@@ -86,7 +86,7 @@ Craft.create!(
 Craft.create!(
 title: 'Easy Christmas Paper Craft',
 name: 'Sarah Smith',
-image: 'https://i2.wp.com/www.thebestideasforkids.com/wp-content/uploads/2017/11/Christmas-Tree-Crafts-for-Kids-Ideas.jpg',
+image: 'https://static.mommypoppins.com/styles/image960x650/s3/universals-holiday-parade-featuring-macys_04edit.jpg',
 description: 'Christmas is right around the corner, and that means crafts galore! This Easy Christmas Paper Craft is a great way to bring in the holiday spirit.
 
 There are many layers to this activity that make it an ideal craft for kids. From the adorable Santa outfit to hanging it to dry on the line, you’ll love every second of this!',

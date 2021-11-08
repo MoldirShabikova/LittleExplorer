@@ -29,7 +29,7 @@ export default function CraftCreate(props) {
           handleCraftCreate(formData)
         }}
       >
-        <h1>Create new Crafts</h1>
+        <h1>Create new Craft</h1>
         <label>
           <p>Title*</p>
           <input
