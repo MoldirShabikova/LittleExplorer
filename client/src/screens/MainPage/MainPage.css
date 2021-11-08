@@ -1,0 +1,34 @@
+.wall-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wall-main-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wall-main-left h1 {
+  color: #141933;
+  font-size: 42.5px;
+}
+
+.wall-main-left p {
+  color: #766b6f;
+  font-size: 19.5px;
+  width: 60%;
+  margin-top: -10px;
+  text-align: center;
+}
+
+.wall-main-right {
+  width: 50%;
+}
+
+.wall-main-right img {
+  width: 97%;
+}

@@ -43,7 +43,7 @@ export default function CraftCreate(props) {
         <label>
           <p>Date*</p>
           <input
-            type='text'
+            type='date'
             name='date'
             value={posted_date}
             onChange={handleChange}

@@ -13,9 +13,9 @@ export default function Contact(params) {
       <div className='contact-icons'>
         <img src='https://img.icons8.com/ios/100/000000/address--v1.png' />
         <p>
-          2117 Bay Ridge Avenue
+          7 Navy pier court
           <br />
-          Brooklyn, NY 12204
+          Staten Island, NY 12204
         </p>
       </div>
       <div className='contact-icons'>
