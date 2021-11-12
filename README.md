@@ -2,6 +2,10 @@
 ## Date:
 November, 2021 - Present
 
+## See project here
+
+https://zealous-hypatia-567fe2.netlify.app/
+
 ## Brief short description
 More than just event listings: For parents who love to seek out the coolest, off-the-beaten-track things to do with kids,Little Explorer shares activities that aren't just pleasant time passers, but promise enriching experiences for your family. At large, it should grow as a communication medium and resource sharing channel for all people.
 
